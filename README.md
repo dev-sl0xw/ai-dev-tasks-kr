@@ -1,195 +1,196 @@
-# 🚀 AI Dev Tasks 🤖
+# 🚀 AI 개발 작업 🤖
 
-Welcome to **AI Dev Tasks**! This repository provides a collection of markdown files designed to supercharge your feature development workflow with AI-powered IDEs and CLIs. Originally built for [Cursor](https://cursor.sh/), these tools work with any AI coding assistant including Claude Code, Windsurf, and others. By leveraging these structured prompts, you can systematically approach building features, from ideation to implementation, with built-in checkpoints for verification.
+**AI 개발 작업**에 오신 것을 환영합니다! 이 저장소는 AI 기반 IDE 및 CLI를 사용하여 기능 개발 워크플로를 강화하도록 설계된 마크다운 파일 모음을 제공합니다. 원래 [Cursor](https://cursor.sh/)용으로 개발된 이 도구는 Claude Code, Windsurf 등을 포함한 모든 AI 코딩 어시스턴트와 호환됩니다. 이러한 구조화된 프롬프트를 활용하면 기본 제공 체크포인트를 통해 검증부터 구현까지 기능 구축에 체계적으로 접근할 수 있습니다.
 
-Stop wrestling with monolithic AI requests and start guiding your AI collaborator step-by-step!
+모놀리식 AI 요청으로 씨름하지 말고 AI 협력자를 단계별로 안내하세요!
 
-## ✨ The Core Idea
+## ✨ 핵심 아이디어
 
-Building complex features with AI can sometimes feel like a black box. This workflow aims to bring structure, clarity, and control to the process by:
+AI를 사용하여 복잡한 기능을 구축하는 것은 때로는 블랙박스처럼 느껴질 수 있습니다. 이 워크플로는 다음을 통해 프로세스에 구조, 명확성 및 제어 기능을 제공하는 것을 목표로 합니다.
 
-1. **Defining Scope:** Clearly outlining what needs to be built with a Product Requirement Document (PRD).
-2. **Detailed Planning:** Breaking down the PRD into a granular, actionable task list.
-3. **Iterative Implementation:** Guiding the AI to tackle one task at a time, allowing you to review and approve each change.
+1. **범위 정의:** 제품 요구 사항 문서(PRD)를 통해 구축해야 할 내용을 명확하게 설명합니다.
+2. **상세 계획:** PRD를 세부적이고 실행 가능한 작업 목록으로 세분화합니다.
+3. **반복적 구현:** AI가 한 번에 한 가지 작업을 처리하도록 안내하여 개발자가 각 변경 사항을 검토하고 승인할 수 있도록 합니다.
 
-This structured approach helps ensure the AI stays on track, makes it easier to debug issues, and gives you confidence in the generated code.
+이러한 체계적인 접근 방식은 AI가 제대로 작동하도록 하고, 문제 디버깅을 용이하게 하며, 생성된 코드에 대한 확신을 제공합니다.
 
-## Workflow: From Idea to Implemented Feature 💡➡️💻
+## 워크플로: 아이디어에서 구현된 기능까지 💡➡️💻
 
-Here's the step-by-step process using the `.md` files in this repository:
+이 저장소의 `.md` 파일을 사용하는 단계별 프로세스는 다음과 같습니다.
 
-### 1️⃣ Create a Product Requirement Document (PRD)
+### 1️⃣ 제품 요구 사항 문서(PRD) 생성
 
-First, lay out the blueprint for your feature. A PRD clarifies what you're building, for whom, and why.
+먼저, 기능에 대한 청사진을 작성합니다. PRD는 무엇을, 누구를 위해, 왜 개발하는지 명확하게 보여줍니다.
 
-You can create a lightweight PRD directly within your AI tool of choice:
+선택한 AI 도구 내에서 바로 가벼운 PRD를 생성할 수 있습니다.
 
-1. Ensure you have the `create-prd.md` file from this repository accessible.
-2. In your AI tool, initiate PRD creation:
+1. 이 저장소의 `create-prd.md` 파일에 액세스할 수 있는지 확인합니다.
+2. AI 도구에서 PRD 생성을 시작합니다.
 
-    ```text
-    Use @create-prd.md
-    Here's the feature I want to build: [Describe your feature in detail]
-    Reference these files to help you: [Optional: @file1.py @file2.ts]
-    ```
-    *(Pro Tip: For Cursor users, MAX mode is recommended for complex PRDs if your budget allows for more comprehensive generation.)*
+```text
+@create-prd.md 사용
+빌드하려는 기능은 다음과 같습니다. [기능을 자세히 설명하세요]
+다음 파일을 참고하여 도움을 받으세요. [선택 사항: @file1.py @file2.ts]
+```
+*(전문가 팁: Cursor 사용자의 경우, 예산이 충분하여 더 포괄적으로 PRD를 생성할 수 있다면 복잡한 PRD에 MAX 모드를 사용하는 것이 좋습니다.)*
 
-    ![Example of initiating PRD creation](https://pbs.twimg.com/media/Go6DDlyX0AAS7JE?format=jpg&name=large)
+![PRD 생성 시작 예시](https://pbs.twimg.com/media/Go6DDlyX0AAS7JE?format=jpg&name=large)
 
-### 2️⃣ Generate Your Task List from the PRD
+### 2️⃣ PRD에서 작업 목록 생성
 
-With your PRD drafted (e.g., `MyFeature-PRD.md`), the next step is to generate a detailed, step-by-step implementation plan for your AI Developer.
+PRD 초안(예: `MyFeature-PRD.md`)을 작성했으면 다음 단계는 AI 개발자를 위한 상세하고 단계별 구현 계획을 생성하는 것입니다.
 
-1. Ensure you have `generate-tasks.md` accessible.
-2. In your AI tool, use the PRD to create tasks:
+1. `generate-tasks.md`에 액세스할 수 있는지 확인합니다.
+2. AI 도구에서 PRD를 사용하여 작업을 생성합니다.
 
-    ```text
-    Now take @MyFeature-PRD.md and create tasks using @generate-tasks.md
-    ```
-    *(Note: Replace `@MyFeature-PRD.md` with the actual filename of the PRD you generated in step 1.)*
+```text
+이제 @MyFeature-PRD.md 파일을 가져와 @generate-tasks.md 파일을 사용하여 작업을 생성합니다.
+```
+*(참고: `@MyFeature-PRD.md`를 1단계에서 생성한 PRD의 실제 파일 이름으로 바꾸세요.)*
 
-    ![Example of generating tasks from PRD](https://pbs.twimg.com/media/Go6FITbWkAA-RCT?format=jpg&name=medium)
+![PRD에서 작업 생성 예시](https://pbs.twimg.com/media/Go6FITbWkAA-RCT?format=jpg&name=medium)
 
-### 3️⃣ Examine Your Task List
+### 3️⃣ 작업 목록 검토
 
-You'll now have a well-structured task list, often with tasks and sub-tasks, ready for the AI to start working on. This provides a clear roadmap for implementation.
+이제 AI가 작업을 시작할 수 있도록 작업 및 하위 작업이 포함된 잘 구성된 작업 목록이 준비되었습니다. 이는 구현을 위한 명확한 로드맵을 제공합니다.
 
-![Example of a generated task list](https://pbs.twimg.com/media/Go6GNuOWsAEcSDm?format=jpg&name=medium)
+![생성된 작업 목록의 예](https://pbs.twimg.com/media/Go6GNuOWsAEcSDm?format=jpg&name=medium)
 
-### 4️⃣ Instruct the AI to Work Through Tasks (and Mark Completion)
+### 4️⃣ AI에게 작업 진행 및 완료 표시 지시하기
 
-To ensure methodical progress and allow for verification, we'll use `process-task-list.md`. This command instructs the AI to focus on one task at a time and wait for your go-ahead before moving to the next.
+체계적인 진행을 보장하고 검증을 위해 `process-task-list.md`를 사용합니다. 이 명령어는 AI가 한 번에 한 가지 작업에 집중하고 사용자의 지시를 받은 후 다음 작업으로 넘어가도록 지시합니다.
 
-1. Create or ensure you have the `process-task-list.md` file accessible.
-2. In your AI tool, tell the AI to start with the first task (e.g., `1.1`):
+1. `process-task-list.md` 파일을 생성하거나 해당 파일에 접근할 수 있는지 확인합니다.
+2. AI 도구에서 AI에게 첫 번째 작업(예: `1.1`)부터 시작하도록 지시합니다.
 
-    ```text
-    Please start on task 1.1 and use @process-task-list.md
-    ```
-    *(Important: You only need to reference `@process-task-list.md` for the *first* task. The instructions within it guide the AI for subsequent tasks.)*
+```text
+작업 1.1부터 시작하고 @process-task-list.md를 사용하세요.
+```
+*(중요: *첫 번째* 작업의 경우 `@process-task-list.md`만 참조하면 됩니다. 해당 파일의 지침이 AI에게 후속 작업을 안내합니다.)*
 
-    The AI will attempt the task and then prompt you to review.
+AI가 작업을 시도한 후 검토를 요청합니다.
 
-    ![Example of starting on a task with process-task-list.md](https://pbs.twimg.com/media/Go6I41KWcAAAlHc?format=jpg&name=medium)
+![process-task-list.md로 작업을 시작하는 예시](https://pbs.twimg.com/media/Go6I41KWcAAAlHc?format=jpg&name=medium)
 
-### 5️⃣ Review, Approve, and Progress ✅
+### 5️⃣ 검토, 승인 및 진행 ✅
 
-As the AI completes each task, you review the changes.
+AI가 각 작업을 완료할 때마다 변경 사항을 검토합니다.
 
-* If the changes are good, simply reply with "yes" (or a similar affirmative) to instruct the AI to mark the task complete and move to the next one.
-* If changes are needed, provide feedback to the AI to correct the current task before moving on.
+* 변경 사항이 만족스럽다면 "예"(또는 유사한 긍정)로 응답하여 AI가 작업을 완료로 표시하고 다음 작업으로 넘어가도록 지시하세요.
+* 변경 사항이 필요한 경우, AI에게 피드백을 제공하여 현재 작업을 수정한 후 다음 작업으로 넘어가세요.
 
-You'll see a satisfying list of completed items grow, providing a clear visual of your feature coming to life!
+완료된 항목 목록이 만족스럽게 늘어나면서 기능이 실제로 구현되는 모습을 명확하게 확인할 수 있습니다!
 
-![Example of a progressing task list with completed items](https://pbs.twimg.com/media/Go6KrXZWkAA_UuX?format=jpg&name=medium)
+![완료된 항목이 포함된 진행 중인 작업 목록의 예](https://pbs.twimg.com/media/Go6KrXZWkAA_UuX?format=jpg&name=medium)
 
-While it's not always perfect, this method has proven to be a very reliable way to build out larger features with AI assistance.
+항상 완벽하지는 않지만, 이 방법은 AI의 도움을 받아 더 큰 기능을 구축하는 매우 안정적인 방법임이 입증되었습니다.
 
-### Video Demonstration 🎥
+### 비디오 데모 🎥
 
-If you'd like to see this in action, I demonstrated it on [Claire Vo's "How I AI" podcast](https://www.youtube.com/watch?v=fD4ktSkNCw4).
+실제로 이 방법을 보고 싶으시다면 [Claire Vo의 "How I AI" 팟캐스트](https://www.youtube.com/watch?v=fD4ktSkNCw4)에서 시연했습니다.
 
-![Demonstration of AI Dev Tasks on How I AI Podcast](https://img.youtube.com/vi/fD4ktSkNCw4/maxresdefault.jpg)
+![How I AI 팟캐스트에서 AI 개발 작업 시연](https://img.youtube.com/vi/fD4ktSkNCw4/maxresdefault.jpg)
 
-## 🗂️ Files in this Repository
+## 🗂️ 이 저장소의 파일
 
-* **`create-prd.md`**: Guides the AI in generating a Product Requirement Document for your feature.
-* **`generate-tasks.md`**: Takes a PRD markdown file as input and helps the AI break it down into a detailed, step-by-step implementation task list.
-* **`process-task-list.md`**: Instructs the AI on how to process the generated task list, tackling one task at a time and waiting for your approval before proceeding. (This file also contains logic for the AI to mark tasks as complete).
+* **`create-prd.md`**: AI가 Pr을 생성하도록 안내합니다.
+기능에 대한 제품 요구 사항 문서.
+* **`generate-tasks.md`**: PRD 마크다운 파일을 입력으로 받아 AI가 이를 세부적인 단계별 구현 작업 목록으로 분해하도록 지원합니다.
+* **`process-task-list.md`**: AI가 생성된 작업 목록을 처리하는 방법을 지시합니다. 한 번에 한 작업씩 처리하고 승인을 받은 후 진행합니다. (이 파일에는 AI가 작업을 완료로 표시하는 로직도 포함되어 있습니다.)
 
-## 🌟 Benefits
+## 🌟 이점
 
-* **Structured Development:** Enforces a clear process from idea to code.
-* **Step-by-Step Verification:** Allows you to review and approve AI-generated code at each small step, ensuring quality and control.
-* **Manages Complexity:** Breaks down large features into smaller, digestible tasks for the AI, reducing the chance of it getting lost or generating overly complex, incorrect code.
-* **Improved Reliability:** Offers a more dependable approach to leveraging AI for significant development work compared to single, large prompts.
-* **Clear Progress Tracking:** Provides a visual representation of completed tasks, making it easy to see how much has been done and what's next.
+* **구조화된 개발:** 아이디어부터 코드까지 명확한 프로세스를 적용합니다.
+* **단계별 검증:** AI가 생성한 코드를 각 단계별로 검토하고 승인할 수 있도록 하여 품질과 제어를 보장합니다.
+* **복잡성 관리:** 큰 기능을 AI가 이해하기 쉬운 작은 작업으로 분해하여 AI가 코드를 잃거나 지나치게 복잡하고 잘못된 코드를 생성할 가능성을 줄입니다.
+* **향상된 안정성:** 단일 대규모 프롬프트에 비해 중요한 개발 작업에 AI를 활용하는 더욱 신뢰할 수 있는 접근 방식을 제공합니다.
+* **명확한 진행 상황 추적:** 완료된 작업을 시각적으로 표시하여 얼마나 완료되었고 다음 단계는 무엇인지 쉽게 파악할 수 있습니다.
 
-## 🛠️ How to Use
+## 🛠️ 사용 방법
 
-1. **Clone or Download:** Get these `.md` files into your project or a central location where your AI tool can access them.
-   ```bash
-   git clone https://github.com/snarktank/ai-dev-tasks.git
-   ```
-2. **Follow the Workflow:** Systematically use the `.md` files in your AI assistant as described in the workflow above.
-3. **Adapt and Iterate:**
-    * Feel free to modify the prompts within the `.md` files to better suit your specific needs or coding style.
-    * If the AI struggles with a task, try rephrasing your initial feature description or breaking down tasks even further.
+1. **복제 또는 다운로드:** 이 `.md` 파일을 프로젝트 또는 AI 도구가 액세스할 수 있는 중앙 위치로 가져옵니다.
+```bash
+git clone https://github.com/snarktank/ai-dev-tasks.git
+```
+2. **워크플로 따르기:** 위의 워크플로에 설명된 대로 AI 어시스턴트에서 `.md` 파일을 체계적으로 사용합니다.
+3. **조정 및 반복:**
+* 특정 요구 사항이나 코딩 스타일에 맞게 `.md` 파일 내의 프롬프트를 자유롭게 수정하세요.
+* AI가 특정 작업에 어려움을 겪는다면, 처음 제시한 기능 설명을 다시 표현하거나 작업을 더욱 세분화해 보세요.
 
-## Tool-Specific Instructions
+## 도구별 지침
 
-### Cursor
+### 커서
 
-Cursor users can follow the workflow described above, using the `.md` files directly in the Agent chat:
+커서 사용자는 에이전트 채팅에서 `.md` 파일을 직접 사용하여 위에 설명된 워크플로를 따를 수 있습니다.
 
-1. Ensure you have the files from this repository accessible
-2. In Cursor's Agent chat, reference files with `@` (e.g., `@create-prd.md`)
-3. Follow the 5-step workflow as outlined above
-4. **MAX Mode for PRDs:** Using MAX mode in Cursor for PRD creation can yield more thorough results if your budget supports it
+1. 이 저장소의 파일에 액세스할 수 있는지 확인합니다.
+2. 커서의 에이전트 채팅에서 `@` 기호를 사용하여 파일을 참조합니다(예: `@create-prd.md`).
+3. 위에 설명된 5단계 워크플로를 따릅니다.
+4. **PRD의 MAX 모드:** 예산이 충분하다면 커서에서 PRD 생성 시 MAX 모드를 사용하면 더욱 완벽한 결과를 얻을 수 있습니다.
 
-### Claude Code
+### 클로드 코드
 
-To use these tools with Claude Code:
+클로드 코드에서 이러한 도구를 사용하려면 다음을 수행합니다.
 
-1. **Copy files to your repo**: Copy the three `.md` files to a subdirectory in your project (e.g., `/ai-dev-tasks`)
+1. **저장소에 파일 복사**: 세 개의 `.md` 파일을 프로젝트의 하위 디렉터리(예: `/ai-dev-tasks`)에 복사합니다.
 
-2. **Reference in CLAUDE.md**: Add these lines to your project's `./CLAUDE.md` file:
-   ```
-   # AI Dev Tasks
-   Use these files when I request structured feature development using PRDs:
-   /ai-dev-tasks/create-prd.md
-   /ai-dev-tasks/generate-tasks.md
-   /ai-dev-tasks/process-task-list.md
-   ```
+2. **CLAUDE.md 참조**: 프로젝트의 `./CLAUDE.md` 파일에 다음 줄을 추가합니다.
+```
+# AI 개발 작업
+PRD를 사용하여 구조화된 기능 개발을 요청할 때 다음 파일을 사용하세요.
+/ai-dev-tasks/create-prd.md
+/ai-dev-tasks/generate-tasks.md
+/ai-dev-tasks/process-task-list.md
+```
 
-3. **Create custom commands** (optional): For easier access, create these files in `.claude/commands/`:
-   - `.claude/commands/create-prd.md` with content:
-     ```
-     Please use the structured workflow in /ai-dev-tasks/create-prd.md to help me create a PRD for a new feature.
-     ```
-   - `.claude/commands/generate-tasks.md` with content:
-     ```
-     Please generate tasks from the PRD using /ai-dev-tasks/generate-tasks.md
-     If not explicitly told which PRD to use, generate a list of PRDs and ask the user to select one under `/tasks` or create a new one using `create-prd.md`:
-     - assume it's stored under `/tasks` and has a filename starting with `prd-` (e.g., `prd-[name].md`)
-     - it should not already have a corresponding task list in `/tasks` (e.g., `tasks-prd-[name].md`)
-     - **always** ask the user to confirm the PRD file name before proceeding
-     Make sure to provide options in number lists so I can respond easily (if multiple options).
-     ```
-   - `.claude/commands/process-task-list.md` with content:
-     ```
-     Please process the task list using /ai-dev-tasks/process-task-list.md
-     ```
+3. **커스텀 명령 생성** (선택 사항): 더 쉽게 액세스하려면 `.claude/commands/`에 다음 파일을 생성하세요.
+- `.claude/commands/create-prd.md` (내용:
+```
+/ai-dev-tasks/create-prd.md의 구조화된 워크플로를 사용하여 새 기능에 대한 PRD를 생성해 주세요.
+```
+- `.claude/commands/generate-tasks.md` (내용:
+```
+/ai-dev-tasks/generate-tasks.md)를 사용하여 PRD에서 작업을 생성하세요.
+사용할 PRD를 명시적으로 지정하지 않은 경우, PRD 목록을 생성하고 사용자에게 `/tasks`에서 하나를 선택하거나 `create-prd.md`를 사용하여 새 PRD를 만들도록 요청하세요.
+- `/tasks`에 저장되어 있고 파일 이름이 `prd-`로 시작한다고 가정합니다(예: `prd-[name].md`).
+- `/tasks`에 해당 작업 목록이 이미 있으면 안 됩니다(예: `tasks-prd-[name].md`).
+- 진행하기 전에 **항상** 사용자에게 PRD 파일 이름을 확인하도록 요청합니다.
+옵션이 여러 개인 경우, 쉽게 응답할 수 있도록 숫자 목록으로 옵션을 제공하세요.
+```
+- `.claude/commands/process-task-list.md` (내용:
+```
+/ai-dev-tasks/process-task-list.md를 사용하여 작업 목록을 처리하세요.
+```
 
-   Make sure to restart Claude Code after adding these files (`/exit`).
-   Then use commands like `/create-prd` to quickly start the workflow.
-   Note: This setup can also be adopted for a global level across all your projects, please refer to the Claude Code documentation [here](https://docs.anthropic.com/en/docs/claude-code/memory) and [here](https://docs.anthropic.com/en/docs/claude-code/common-workflows#create-personal-slash-commands).
+이러한 파일을 추가한 후에는 Claude Code를 다시 시작하세요(`/exit`).
+그런 다음 `/create-prd`와 같은 명령을 사용하여 워크플로를 빠르게 시작하세요.
+참고: 이 설정은 모든 프로젝트에 전역적으로 적용할 수 있습니다. Claude Code 문서는 [여기](https://docs.anthropic.com/en/docs/claude-code/memory) 및 [여기](https://docs.anthropic.com/en/docs/claude-code/common-workflows#create-personal-slash-commands)에서 확인할 수 있습니다.
 
-### Other Tools
+### 기타 도구
 
-For other AI-powered IDEs or CLIs:
+다른 AI 기반 IDE 또는 CLI의 경우:
 
-1. Copy the `.md` files to your project
-2. Reference them according to your tool's documentation
-3. Follow the same workflow principles
+1. `.md` 파일을 프로젝트에 복사합니다.
+2. 도구 설명서에 따라 파일을 참조합니다.
+3. 동일한 워크플로 원칙을 따릅니다.
 
-## 💡 Tips for Success
+## 💡 성공을 위한 팁
 
-* **Be Specific:** The more context and clear instructions you provide (both in your initial feature description and any clarifications), the better the AI's output will be.
-* **Use a Capable Model:** The free version of Cursor currently uses less capable AI models that often struggle to follow the structured instructions in this workflow. For best results, consider upgrading to the Pro plan to ensure consistent, accurate task execution.
-* **MAX Mode for PRDs:** As mentioned, using MAX mode in Cursor for PRD creation (`create-prd.mdc`) can yield more thorough and higher-quality results if your budget supports it.
-* **Correct File Tagging:** Always ensure you're accurately tagging the PRD filename (e.g., `@MyFeature-PRD.md`) when generating tasks.
-* **Patience and Iteration:** AI is a powerful tool, but it's not magic. Be prepared to guide, correct, and iterate. This workflow is designed to make that iteration process smoother.
+* **구체적으로 작성하세요:** 초기 기능 설명과 설명 모두에서 맥락과 명확한 지침을 많이 제공할수록 AI의 출력 결과가 더 좋아집니다.
+* **성능이 뛰어난 모델 사용:** Cursor 무료 버전은 현재 성능이 떨어지는 AI 모델을 사용하며, 이 워크플로의 구조화된 지침을 따르기 어려운 경우가 많습니다. 최상의 결과를 얻으려면 일관되고 정확한 작업 실행을 위해 Pro 플랜으로 업그레이드하는 것이 좋습니다.
+* **PRD의 MAX 모드:** 앞서 언급했듯이, PRD 생성을 위해 Cursor에서 MAX 모드를 사용합니다(`create-prd.mdc`)를 사용하면 예산이 충분하다면 더욱 철저하고 고품질의 결과를 얻을 수 있습니다.
+* **올바른 파일 태그 지정:** 작업을 생성할 때 항상 PRD 파일 이름(예: `@MyFeature-PRD.md`)에 정확한 태그를 지정해야 합니다.
+* **인내심과 반복:** AI는 강력한 도구이지만 마법은 아닙니다. 안내, 수정, 반복 작업을 할 준비를 하세요. 이 워크플로는 이러한 반복 프로세스를 더욱 원활하게 만들기 위해 설계되었습니다.
 
-## 🤝 Contributing
+## 🤝 기여
 
-Got ideas to improve these `.md` files or have new ones that fit this workflow? Contributions are welcome!
+이 `.md` 파일을 개선하거나 이 워크플로에 맞는 새 파일을 만들 아이디어가 있으신가요? 기여를 환영합니다!
 
-Please feel free to:
+다음과 같이 자유롭게 의견을 남겨주세요.
 
-* Open an issue to discuss changes or suggest new features.
-* Submit a pull request with your enhancements.
+* 변경 사항에 대해 논의하거나 새로운 기능을 제안하려면 이슈를 개설하세요.
+* 개선 사항을 포함하여 풀 리퀘스트를 제출하세요.
 
 ---
 
-Happy AI-assisted developing!
+AI의 지원을 받아 행복한 개발하세요!
